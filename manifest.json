@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Select Intelisens",
+    "version": "1.0",
+    "description": "Wyświetla okienko po zaznaczeniu tekstu.",
+    "permissions": ["scripting"],
+    "content_scripts": [
+      {
+        "js": ["content.js"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
