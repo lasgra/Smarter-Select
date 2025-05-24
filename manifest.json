@@ -4,9 +4,19 @@
     "version": "1.0",
     "description": "Wyświetla okienko po zaznaczeniu tekstu.",
     "permissions": ["scripting"],
+    "host_permissions": [
+      "https://ipapi.co/",
+      "https://latest.currency-api.pages.dev/v1/currencies/"
+    ],
     "content_scripts": [
       {
         "js": ["content.js"],
+        "matches": ["<all_urls>"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["currencyData.json"],
         "matches": ["<all_urls>"]
       }
     ]
